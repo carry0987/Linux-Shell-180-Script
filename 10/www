@@ -1,0 +1,10 @@
+service www
+{
+        flags           = REUSE
+        socket_type     = stream
+        wait            = no
+        user            = root
+        port            = 80
+        server          = /usr/sbin/in.telnetd
+        log_on_failure  += USERID
+}
